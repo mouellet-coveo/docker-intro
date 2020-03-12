@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  nginx:
+    image: mcgill-workshop
+    ports:
+      - "8085:80"
+
+    deploy:
+      replicas: 3
+      
+      update_config:
+        parallelism: 1
+        delay: 10s
